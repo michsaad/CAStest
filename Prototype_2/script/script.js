@@ -19,7 +19,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 function loadGLTF() {
         let balloonLoader = new THREE.GLTFLoader();
-        balloonLoader.load('./model/h.gltf', (gltf) => {
+        balloonLoader.load('./model/EXX.gltf', (gltf) => {
             Mesh = gltf.scene;
             Mesh.scale.set(0.049,0.049,0.049);
             scene.add(Mesh);
@@ -28,6 +28,18 @@ function loadGLTF() {
             Mesh.position.z = 14;
         });
     }
+
+//     Mesh.userData = 
+//     { URL: "../indexscrolly.html"
+// };
+
+
+
+//     if (intersects.length > 0) {
+//         window.open(intersects[0].mesh.userData.URL);
+        
+//     }
+
 
     window.addEventListener('resize', () =>
 {
@@ -71,9 +83,17 @@ function loadGLTF() {
 
     const animate = function () {
     requestAnimationFrame( animate );
-    Mesh.rotation.y += 0.025;
+    Mesh.rotation.y += 0.020;
     renderer.render( scene, camera );
 };
+
+// let linkboxx = document.querySelector('#linkboxx');
+// scene.add(linkboxx)
+// linkboxx.position.x = 0;
+// linkboxx.position.y = 9.3;
+// linkboxx.position.z = 14;
+
+
 
 
     init();
@@ -85,3 +105,4 @@ function loadGLTF() {
     lit();
     itt();
     nitt();
+

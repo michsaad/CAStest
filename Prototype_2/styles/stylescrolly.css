@@ -1,7 +1,7 @@
 * {
   font-family: "Arial";
   color: white;
-  margin: 0px;
+  margin: 20px;
   background-color: black;
 }
 
@@ -21,14 +21,8 @@
   transition: all 0.3s linear;
 }
 
-.cls-13 {
-  width: 0px;
-  height: 0px;
-}
-
 p {
-  font-size: 24px;
-  margin: auto;
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,8 +38,15 @@ section {
   flex-basis: 50%;
 }
 .scroll-step {
-  height: 500px;
-  border: 1px solid gray;
+  background-color: white;
+  font-family: "Dongle", sans-serif;
+  color: black;
+  height: 180px;
+  width: 300px;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 50px;
+  box-shadow: 6px 8px 15px darkblue;
 }
 
 .intro,
@@ -55,4 +56,8 @@ section {
 
 .end {
   margin-top: 200px;
+}
+
+.cls-13 {
+  transition: opacity 3s linear;
 }

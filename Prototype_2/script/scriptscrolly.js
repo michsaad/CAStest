@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', async function () {
-  function changeBallSize(width, height) {
-    console.log(width, height);
+  function changeBallOpacity(opacity) {
+    console.log(opacity);
     let ball = document.querySelector('.ball');
-    ball.style.width = width + 'px';
-    ball.style.height = height + 'px';
+    ball.style.opacity = opacity;
   }
+
+  changeBallOpacity (1);
 
   // instantiate the scrollama
   const scroller = scrollama();
@@ -18,10 +19,11 @@ document.addEventListener('DOMContentLoaded', async function () {
       step: '.scroll-step',
     })
     .onStepEnter((response) => {
+      console.log(response)
       let desiredSize = response.element.getAttribute('data-size');
 
-      if (desiredSize) {
-        changeBallSize(desiredSize, desiredSize);
+      if (index = [1]) {
+        changeBallSize(1);
       }
 
       // { element, index, direction }
@@ -29,10 +31,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     .onStepExit((response) => {
       //detect if it's the last step
       if (response.index == numberSteps - 1) {
-        changeBallSize(30, 30);      
+        changeBallSize(100, 100);      
       }
     });
     
 });
-
 
